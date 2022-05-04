@@ -15,7 +15,9 @@ resolvers += Resolver.url("HMRC-open-artefacts-ivy2", url("https://open.artefact
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play"         % "5.0.0" % Test
 libraryDependencies += "uk.gov.hmrc"            %% "bootstrap-frontend-play-28" % "5.14.0"
-libraryDependencies += "uk.gov.hmrc"            %% "play-frontend-hmrc"         % "3.15.0-play-28"
+libraryDependencies += "uk.gov.hmrc"            %% "play-frontend-hmrc"         % "3.16.0-play-28-SNAPSHOT"
+// ^^ this is a version where the hmrc asset route has the +prevent-updating-session route modifier added
+//    if you want to run the example using this fix yourself you'll need to create this snapshot locally
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "uk.gov.hmrc.controllers._"

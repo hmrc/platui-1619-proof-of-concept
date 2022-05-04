@@ -1,0 +1,18 @@
+{
+    local_certs
+}
+
+www.local.tax.service.gov.uk {
+    # Created to check that "localhost" / non-ssl browser rules didn't interfere with tests
+    # 
+    # you can use the filter in play, or something at the infrastructure level like the below
+    # which could go in somewhere like cloudfront or nginx I guess in the prod infrastructure.
+    #
+    # @static {
+    #     path_regexp \.(jpg|jpeg|gif|png|ico|css|js)$
+    # }
+    # header @static -Set-Cookie
+    #
+
+    reverse_proxy localhost:9000
+}
