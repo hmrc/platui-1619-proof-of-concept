@@ -5,7 +5,7 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.13.8"
+scalaVersion := "2.12.10"
 
 resolvers += MavenRepository("HMRC-open-artefacts-maven2", "https://open.artefacts.tax.service.gov.uk/maven2")
 resolvers += Resolver.url("HMRC-open-artefacts-ivy2", url("https://open.artefacts.tax.service.gov.uk/ivy2"))(
@@ -13,10 +13,9 @@ resolvers += Resolver.url("HMRC-open-artefacts-ivy2", url("https://open.artefact
 )
 
 libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
-libraryDependencies += "uk.gov.hmrc"              %% "bootstrap-frontend-play-28" % "5.14.0"
-libraryDependencies += "uk.gov.hmrc"              %% "play-frontend-hmrc" % "3.13.0-play-28"
-
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play"         % "5.0.0" % Test
+libraryDependencies += "uk.gov.hmrc"            %% "bootstrap-frontend-play-28" % "5.14.0"
+libraryDependencies += "uk.gov.hmrc"            %% "play-frontend-hmrc"         % "3.15.0-play-28"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "uk.gov.hmrc.controllers._"
